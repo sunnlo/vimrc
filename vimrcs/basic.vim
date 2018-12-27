@@ -33,6 +33,12 @@
 " Sets how many lines of history VIM has to remember
 set history=500
 
+" Show line number
+set number
+
+" Use VIM instead of VI
+set nocp
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
@@ -51,6 +57,8 @@ nmap <leader>w :w!<cr>
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
 
+" Set tags file position
+set tags=./tags,tags;$HOME
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -75,8 +83,11 @@ else
     set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
 
-"Always show current position
+" Always show current position
 set ruler
+
+" Enable mouse cursor
+set mouse=a
 
 " Height of the command bar
 set cmdheight=2
