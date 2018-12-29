@@ -149,5 +149,6 @@ map <leader>t :Tlist<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => WinManager
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:AutoOpenWinManager = 1
 let g:winManagerWindowLayout='FileExplorer|TagList'
 nmap <leader>w :WMToggle<cr>
